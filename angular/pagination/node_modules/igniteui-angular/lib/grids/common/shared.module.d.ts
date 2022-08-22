@@ -1,0 +1,31 @@
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/common";
+import * as i2 from "@angular/forms";
+import * as i3 from "../../directives/button/button.directive";
+import * as i4 from "../../date-picker/date-picker.module";
+import * as i5 from "../../icon/public_api";
+import * as i6 from "../../directives/ripple/ripple.directive";
+import * as i7 from "../../input-group/input-group.component";
+import * as i8 from "../../directives/focus/focus.directive";
+import * as i9 from "../../directives/toggle/toggle.directive";
+import * as i10 from "../../directives/for-of/for_of.directive";
+import * as i11 from "../../directives/template-outlet/template_outlet.directive";
+import * as i12 from "../../directives/text-highlight/text-highlight.directive";
+import * as i13 from "../../directives/text-selection/text-selection.directive";
+import * as i14 from "../../checkbox/checkbox.component";
+import * as i15 from "../../badge/badge.component";
+import * as i16 from "../../chips/chips.module";
+import * as i17 from "../../directives/drag-drop/drag-drop.directive";
+import * as i18 from "../../drop-down/public_api";
+import * as i19 from "../../buttonGroup/buttonGroup.component";
+import * as i20 from "../../progressbar/progressbar.component";
+import * as i21 from "../../select/select.module";
+import * as i22 from "../state.directive";
+import * as i23 from "../../snackbar/snackbar.component";
+import * as i24 from "../../time-picker/time-picker.component";
+import * as i25 from "../../directives/date-time-editor/date-time-editor.directive";
+export declare class IgxGridSharedModules {
+    static ɵfac: i0.ɵɵFactoryDeclaration<IgxGridSharedModules, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<IgxGridSharedModules, never, [typeof i1.CommonModule, typeof i2.FormsModule, typeof i3.IgxButtonModule, typeof i4.IgxDatePickerModule, typeof i5.IgxIconModule, typeof i6.IgxRippleModule, typeof i7.IgxInputGroupModule, typeof i8.IgxFocusModule, typeof i9.IgxToggleModule, typeof i10.IgxForOfModule, typeof i11.IgxTemplateOutletModule, typeof i12.IgxTextHighlightModule, typeof i13.IgxTextSelectionModule, typeof i14.IgxCheckboxModule, typeof i15.IgxBadgeModule, typeof i16.IgxChipsModule, typeof i17.IgxDragDropModule, typeof i18.IgxDropDownModule, typeof i19.IgxButtonGroupModule, typeof i20.IgxProgressBarModule, typeof i21.IgxSelectModule, typeof i22.IgxGridStateModule, typeof i23.IgxSnackbarModule, typeof i24.IgxTimePickerModule, typeof i25.IgxDateTimeEditorModule], [typeof i1.CommonModule, typeof i2.FormsModule, typeof i3.IgxButtonModule, typeof i4.IgxDatePickerModule, typeof i5.IgxIconModule, typeof i6.IgxRippleModule, typeof i7.IgxInputGroupModule, typeof i8.IgxFocusModule, typeof i9.IgxToggleModule, typeof i10.IgxForOfModule, typeof i11.IgxTemplateOutletModule, typeof i12.IgxTextHighlightModule, typeof i22.IgxGridStateModule, typeof i13.IgxTextSelectionModule, typeof i14.IgxCheckboxModule, typeof i15.IgxBadgeModule, typeof i16.IgxChipsModule, typeof i17.IgxDragDropModule, typeof i18.IgxDropDownModule, typeof i19.IgxButtonGroupModule, typeof i20.IgxProgressBarModule, typeof i21.IgxSelectModule, typeof i23.IgxSnackbarModule, typeof i24.IgxTimePickerModule, typeof i25.IgxDateTimeEditorModule]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<IgxGridSharedModules>;
+}

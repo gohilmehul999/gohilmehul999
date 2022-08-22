@@ -1,0 +1,157 @@
+<h2>bootstrap accordion</h2>
+<ngb-accordion>
+  <ngb-panel title="panel">
+    <ng-template ngbPanelContent>content</ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<h2>bootstrap alert</h2>
+<div class="alert alert-primary" role="alert">
+  Content
+</div>
+<ngb-alert color="danger">danger</ngb-alert>
+
+
+<h2>bootstrap button</h2>
+<button class="btn btn-primary">ngb button</button>
+<button class="btn btn-success">ngb button</button>
+
+
+<h2>bootstrap carousel</h2>
+
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div>
+      <img [src]="image1" alt="Random first slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img [src]="image2" alt="Random second slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img [src]="image3" alt="Random third slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+<h2>bootstrap collapse</h2>
+<div class="container">
+  <ngb-accordion activeIds="tgl1" #acc="ngbAccordion">
+    <ngb-panel id="tgl1" title="title">
+      <ng-template ngbPanelContent>
+        this is accordion
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+  <BUtton class="btn btn-outline-success mb-5" (click)="acc.collapseAll()" (click)="acc.toggle('tgl1')">toggle
+    accordion</BUtton>
+</div>
+<h2>bootstrap datepicker</h2>
+<input type="text" ngbDatepicker #d="ngbDatepicker" />
+<button class="btn btn-outline-success" (click)="d.toggle()">Toggle</button>
+
+<h2>bootstrap dropdown</h2>
+<div ngbDropdown class="ngbdropdown">
+  <button ngbDropdownToggle class="btn btn-outer-success dropdown-toggle">drop me</button>
+  <div ngbDropdownMenu class="dropdownmenu">
+    <div ngbDropdownItem class="dropdownitem">ITEM1</div>
+    <div ngbDropdownItem class="dropdownitem">ITEM2</div>
+    <div ngbDropdownItem class="dropdownitem">ITEM3</div>
+  </div>
+</div>
+
+<h2>bootstrap modal</h2>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Hello, World!</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+<h2>bootstrap nav</h2>
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink>First</a>
+    <ng-template ngbNavContent>First content</ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Second</a>
+    <ng-template ngbNavContent>Second content</ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>
+
+
+<h2>bootstrap pagination</h2>
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="70"></ngb-pagination>
+<h2>boostrap popover</h2>
+<button ngbPopover="this is popover" popoverTitle="Popover on left">ok</button>
+<h2>boostrap progressbar</h2>
+<ngb-progressbar color="dark" [showValue]="true" type="success" textType="white" [value]="50"> </ngb-progressbar>
+
+
+<h2>bootstrap rating</h2>
+<ngb-rating [(rate)]="current"></ngb-rating>
+
+<h2>{{current}}</h2>
+
+<h2>table</h2>
+<table class="table table-dark table-striped">
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+    </tr>
+    <tr *ngFor="let data of table">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+    </tr>
+  </tbody>
+</table>
+<h2>timepicker</h2>
+<ngb-timepicker [(ngModel)]="time" [meridian]="meridian"></ngb-timepicker>
+
+<h2>bootstrap toast</h2>
+<ngb-toast *ngIf="show" [autohide]="false" (hidden)="show=false">
+  <ng-template ngbToastHeader>
+    <div class="me-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <path
+          d="M16.896 10l-4.896-8-4.896 8-7.104-4 3 11v5h18v-5l3-11-7.104 4zm-11.896 10v-2h14v2h-14zm14.2-4h-14.4l-1.612-5.909 4.615 2.598 4.197-6.857 4.197 6.857 4.615-2.598-1.612 5.909z" />
+      </svg>
+      <strong class="mx-1">Fancy</strong>header here
+    </div>
+
+  </ng-template>
+  Hello, I am toast. Have you noticed my header has been generated from a Template?
+</ngb-toast>
+
+<h2>tooltip</h2>
+<button class="btn btn-success" ngbTooltip="this is tooltip ">ngb tooltip</button>
+<h2>bootstrap typehead</h2>
+<input type="text" [(ngModel)]="mode">
+mode:{{mode}}

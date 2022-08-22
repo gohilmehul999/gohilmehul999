@@ -1,0 +1,34 @@
+<h1>ngif</h1>
+<h1>list</h1>
+<div  *ngIf="course.length > 0 ;then truepart else elsepart"></div>
+<ng-template #elsepart>no course yet</ng-template>
+<ng-template #truepart>course available</ng-template>
+
+<!-- <div hidden>hidden</div>
+<div [hidden]="course.length > 0">available</div>
+<div [hidden]="course.length == 0">not available</div>
+<div [hidden]="ishidden">hidden</div> -->
+
+<h1>ngswitch</h1>
+<ul class="nav nav-pills">
+  <li><button class="btn active btn-success" href="" (click)="viewmode = 'map'">map view</button></li>
+  <li><button class="btn active btn-success" href=""  (click)="viewmode = 'list'">list view</button></li>
+</ul>
+
+<div [ngSwitch]="viewmode">
+  <div *ngSwitchCase="'map'">map view content</div>
+  <div *ngSwitchCase="'list'">list view content</div>
+  <div *ngSwitchDefault>OtherWise</div>
+</div>
+<button class="btn " (click)="onadd()">add</button>
+<button appDir (click)="onremove(details)">remove</button>
+<h1>ngfor</h1>
+<div *ngFor="let detail of details; index as i;even as iseven"><br>{{i}}--{{detail.name}}<span
+    *ngIf="iseven">(even)</span></div>
+
+    <h2>ngclass</h2>
+    <button class="btn btn-outline-danger" [ngClass]="'bround'">click</button>
+    <div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+    <div [ngClass]="{'one':false,'two':true}">This div is initially saveable, unchanged, and special.</div>
+<h1>ngstyle</h1>
+<div [ngStyle]="{'color':colorval}">fun time</div>

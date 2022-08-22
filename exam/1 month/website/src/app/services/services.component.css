@@ -1,0 +1,89 @@
+.pathimg {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+h1 {
+  top: 26%;
+  position: absolute;
+  left: 7%;
+  font-size: 70px;
+  color:
+#000a2d
+}
+
+h6 {
+  top: 40%;
+  position: absolute;
+  left: 7%;
+  font-size: 18px;
+  color: rgb(236, 96, 83);
+}
+/* card */
+
+.col-12 {
+  padding-top: 195px;
+  padding-bottom: 90px;
+  display: -webkit-box;
+}
+.cardcol12{
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+}
+.cardcol13{
+  padding-top: 0px;
+  padding-bottom: 90px;
+  display: -webkit-box;
+}
+i{
+  font-size: 48px;
+    display: flex;
+    place-content: center;
+    margin-top: 10vh;
+}
+mat-card{
+  margin-top: 12%;
+  background: rgb(236 91 83);
+  height: 70vh;
+}
+mat-card-title{
+  text-align: center;
+}
+.icon{
+  width: 10%;
+
+}
+.icongroup{
+  display: -webkit-box;
+  display: flex;
+    place-content: space-around;
+    margin: 115px 0px 115px 0px;
+}
+/* bannner */
+.banner{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.banner h2{
+  color: rgb(236 91 83);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top:40%;
+  font-family: serif;
+  font-size: 48px;
+}
+.banner a{
+  float: right;
+  position: absolute;
+  z-index: 1;
+  top:40%;
+  left:75%;
+  background-color:#ec5b53;
+
+}

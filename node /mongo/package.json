@@ -1,0 +1,15 @@
+{
+  "name": "mongopratice",
+  "version": "1.0.0",
+  "description": "practical mongobd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mehul",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongo": "^0.1.0"
+  }
+}

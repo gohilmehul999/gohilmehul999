@@ -1,0 +1,310 @@
+[
+    {
+      "ccode": "IN",
+      "offers": [
+        {
+          "key": "uncharted",
+          "value": "0-0-1z5145156",
+          "assetIds": [
+            "0-0-1z5145156"
+          ],
+          "endDate": "2022-08-18T00:00:00Z"
+        },
+        {
+          "key": "studio-666",
+          "value": "0-0-1z5145151",
+          "assetIds": [
+            "0-0-1z5145151"
+          ],
+          "endDate": "2022-08-18T00:00:00Z"
+        },
+        {
+          "key": "american-underdog",
+          "value": "0-0-1z5137609",
+          "assetIds": [
+            "0-0-1z5137609"
+          ],
+          "endDate": "2022-08-09T00:00:00Z"
+        },
+        {
+          "key": "a-journal-for-jordan",
+          "value": "0-0-1z5137599",
+          "assetIds": [
+            "0-0-1z5137599"
+          ],
+          "endDate": "2022-08-09T00:00:00Z"
+        },
+        {
+          "key": "flee",
+          "value": "0-0-1z5137583",
+          "assetIds": [
+            "0-0-1z5137583"
+          ],
+          "endDate": "2022-08-09T00:00:00Z"
+        },
+        {
+          "key": "spiderman-combo",
+          "value": "0-0-1z5129922",
+          "assetIds": [
+            "0-0-1z5129922"
+          ],
+          "endDate": "2022-07-24T00:00:00Z"
+        },
+        {
+          "key": "ballygunger-bor-barishaler-bou",
+          "value": "0-0-1z555217",
+          "assetIds": [
+            "0-0-1z555217"
+          ],
+          "endDate": "2022-01-10T00:00:00Z"
+        },
+        {
+          "key": "tvod-test-movie-3",
+          "value": "0-0-1z524029",
+          "assetIds": [
+            "0-0-1z524029"
+          ],
+          "endDate": "2022-04-30T00:00:00Z"
+        },
+        {
+          "key": "tvod-test-movie-2",
+          "value": "0-0-425002",
+          "assetIds": [
+            "0-0-425002"
+          ],
+          "endDate": "2021-12-31T00:00:00Z"
+        },
+        {
+          "key": "combo-supermoon",
+          "value": "0-9-373",
+          "assetIds": [
+            "0-9-373",
+            "0-0-103589",
+            "0-0-132444"
+          ],
+          "endDate": "2021-12-31T00:00:00Z"
+        },
+        {
+          "key": "420-IPC-TA",
+          "value": "0-0-1z558385",
+          "assetIds": [
+            "0-0-1z558385"
+          ],
+          "endDate": "2022-01-16T00:00:00Z"
+        },
+        {
+          "key": "420-IPC-TE",
+          "value": "0-0-1z558377",
+          "assetIds": [
+            "0-0-1z558377"
+          ],
+          "endDate": "2022-01-16T00:00:00Z"
+        },
+        {
+          "key": "420-IPC-HI",
+          "value": "0-0-1z552045",
+          "assetIds": [
+            "0-0-1z552045"
+          ],
+          "endDate": "2022-01-16T00:00:00Z"
+        },
+        {
+          "key": "tvod-test-movie-2",
+          "value": "0-0-425002",
+          "assetIds": [
+            "0-0-425002"
+          ],
+          "endDate": "2022-04-30T00:00:00Z"
+        }
+      ],
+      "languages-india": {
+        "Combo_Page_EventOnly_Text": {
+          "en": "Only Rent Movie",
+          "hi": "मूवी सिर्फ रेंट पर",
+          "mr": "केवळ चित्रपट रेंट करा",
+          "gu": "રેન્ટ પર મુવી",
+          "bn": "কেবল ভাড়া করা সিনেমা",
+          "ml": "റെന്‍റൽ മൂവി",
+          "kn": "ಸಿನಿಮಾ ಮಾತ್ರ ಬಾಡಿಗೆಗೆ",
+          "ta": "வெறும் வாடகைத் திரைப்படங்கள்",
+          "te": "మూవీని కేవలం అద్దెకు తీసుకోండి",
+          "pa": "ਸਿਰਫ਼ ਰੈਂਟ ਮੂਵੀ",
+          "hr": "मूवी सिर्फ रेंट पर"
+        },
+        "Combo_Page_FirstOffer_Text1": {
+          "en": "ZEEPLEX",
+          "hi": "ZEEPLEX",
+          "mr": "ZEEPLEX",
+          "gu": "ZEEPLEX",
+          "bn": "ZEEPLEX",
+          "ml": "ZEEPLEX",
+          "kn": "ZEEPLEX",
+          "ta": "ZEEPLEX",
+          "te": "ZEEPLEX",
+          "pa": "ZEEPLEX",
+          "hr": "ZEEPLEX"
+        },
+        "Combo_Page_EventOffer1_Text": {
+          "en": "Rental Validity: 30 Days",
+          "hi": "रेंटल की वैधता: 30 दिन",
+          "mr": "रेंटल की वैधता: 30 दिन",
+          "gu": "રેન્ટલ વેલિડિટી: 30 દિવસ",
+          "bn": "রেন্টালের বৈধতা: 30 দিন",
+          "ml": "റെന്റൽ കാലാവധി: 30 ദിവസം",
+          "kn": "ರೆಂಟಲ್ ಅವಧಿ : 30 ದಿನಗಳು",
+          "ta": "ரெண்டல் வேலிடிட்டி : 30 நாட்கள்",
+          "te": "రెంటల్ గడువు: 30 రోజులు",
+          "pa": "ਰੈਂਟ ਦੀ ਮਿਆਦ: 30 ਦਿਨ",
+          "hr": "रेंटल के वैधता: 30 दिन"
+        },
+        "Combo_Page_EventOffer2_Text": {
+          "en": "Watch anytime within 30 days",
+          "hi": "30 दिनों के भीतर कभी भी देखें",
+          "mr": "30 दिवसांच्या आत कधीही पाहा",
+          "gu": "30 દિવસની અંદર ગમે ત્યારે જુઓ",
+          "bn": "30 দিনের মধ্যে যেকোনো সময় দেখুন",
+          "ml": "30 ദിവസത്തിനുള്ളിൽ എപ്പോൾ വേണമെങ്കിലും കാണൂ",
+          "kn": "30 ದಿನದಲ್ಲಿ ಯಾವಾಗ ಬೇಕಾದರೂ ನೋಡಿ",
+          "ta": "30நாட்களுக்குள் எப்போது வேண்டுமானாலும்  காணுங்கள்",
+          "te": "30 రోజుల్లో ఎప్పుడైనా చూడండి",
+          "pa": "30 ਦਿਨਾਂ ਦੌਰਾਨ ਕਦੇ ਵੀ ਵੇਖੋ",
+          "hr": "30 दिन के भीतर कभी भी देखीं"
+        },
+        "PlanSelection_PlanCard_EffectivePrice_Text": {
+          "en": "Annual Plan + RRR Rental\n\nRRR Only in Telugu, Kannada, Tamil & Malayalam\n\nRental Validity: 7 days from 20th May\n\nWatch time Validity: 24hrs",
+          "hi": "वार्षिक प्लान + RRR रेंटल\n\nRRR केवल तेलुगु, कन्नड़, तमिल और मलयालम में\n\nरेंटल की वैधता: 20 मई से 7 दिन\n\nदेखने के लिए समय की वैधता: 24 घंटे",
+          "mr": "वार्षिक प्लॅन + RRR रेंटल\n\nRRR फक्त तेलुगू, कन्नड, तमिळ आणि मल्याळममध्ये\n\nरेंटलची वैधता: 20 मे पासून 7 दिवस\n\nपाहण्याच्या वेळची वैधता: 24 तास",
+          "gu": "એન્યુઅલ પ્લાન + RRR રેન્ટલ\n\nRRR માત્ર તેલુગુ, કન્નડ, તમિલ અને મલયાલમમાં\n\nરેન્ટલ વેલિડિટી: 20મી મેથી 7 દિવસ\n\nવોચ ટાઈમ વેલિડિટી: 24 કલાક",
+          "bn": "বার্ষিক প্ল্যান + RRR রেন্টাল\n\nRRR শধুমাত্র তেলুগু, কন্নড়, তামিল এবং মালয়ালমে\n\nরেন্টালের বৈধতা: 20 মে থেকে 7 দিন\n\nদেখার সময়ের বৈধতা: 24 ঘণ্টা",
+          "ml": "വാർഷിക പ്ലാൻ + RRR റെൻറ്റൽ\n\nRRR തെലുങ്ക്, കന്നഡ, തമിഴ്& മലയാളം ഭാഷകളിൽ മാത്രം\n\nറെൻറ്റൽ  വാലിഡിറ്റി : മെയ് 20 മുതൽ 7 ദിവസം\n\nവാച്ച് ടൈം വാലിഡിറ്റി: 24 മണിക്കൂർ",
+          "kn": "ವರ್ಷದ ಪ್ಲ್ಯಾನ್  + RRR ಬಾಡಿಗೆಗೆ\n\nRRR ತೆಲುಗು, ಕನ್ನಡ, ತಮಿಳು ಮತ್ತು ಮಲಯಾಳಂನಲ್ಲಿ ಮಾತ್ರ\n\nಬಾಡಿಗೆ ಮಾನ್ಯತೆ: ಮೇ 20 ರಿಂದ 7 ದಿನಗಳು\n\nವೀಕ್ಷಣೆ ಸಮಯ ಮಾನ್ಯತೆ: 24 ಗಂಟೆಗಳು",
+          "ta": "வருடாந்திர பிளான் + RRR ரென்டல்\n\nRRR தெலுங்கு, கன்னடம், தமிழ் & மலையாளத்தில் மட்டுமே\n\nரென்டல் வேலிடிட்டி : மே 20 முதல் 7 நாட்கள்\n\nவாட்ச் டைம் வேலிடிட்டி : 24மணிநேரம்",
+          "te": "యాన్యువల్ ప్లాన్ + RRR రెంటల్\n\nRRR కేవలం తెలుగు, కన్నడ, తమిళ్ & మలయాళం భాషల్లో\n\nరెంటల్ వ్యాలిడిటి: మే 20 నుంచి 7 రోజులు\n\nవాచ్‌టైమ్ వ్యాలిడిటి: 24గం.లు",
+          "pa": "ਸਾਲਾਨਾ ਪਲਾਨ + RRR ਰੈਂਟਲ\n\nRRR ਸਿਰਫ ਤੇਲਗੂ, ਕੰਨੜਾ, ਤਾਮਿਲ ਤੇ ਮਲਿਆਲਮ\n\nਰੈਂਟਲ ਮਿਆਦ: 20 ਮਈ ਤੋਂ 7 ਦਿਨ\n\nਵੌਚ ਟਾਈਮ ਮਿਆਦ: 24 ਘੰਟੇ",
+          "hr": "सालाना प्लान + RRR रेंटल\n\nRRR खाली तेलुगु, कन्नड़, तमिल अऊर मलयालम में\n\nरेंटल के वैधता: 20 मई से 7 दिन\n\nदेखे खातिर समय के वैधता: 24 घंटा"
+        },
+        "PlanSelection_PlanCard_NumberofDevices_Text": {
+          "en": "Watch on {{Number_of_screens}} {{screens}} at the same time",
+          "hi": "एक ही समय में {{Number_of_screens}} {{screens}} पर देखें",
+          "mr": "एकाच वेळी {{Number_of_screens}} {{screens}} वर पाहा",
+          "gu": "એક જ સમયે {{Number_of_screens}} {{screens}} પર જુઓ",
+          "bn": "একই সাথে {{Number_of_screens}} {{screens}} দেখুন",
+          "ml": "ഒരേ സമയം {{Number_of_screens}} {{screens}} കാണുക",
+          "kn": "ಒಂದೇ ಸಮಯದಲ್ಲಿ {{Number_of_screens}} {{screens}} ನೋಡಿ",
+          "ta": "ஒரே நேரத்தில் {{Number_of_screens}} {{screens}} பார்க்கவும்",
+          "te": "ఒకేసారి {{Number_of_screens}} {{screens}} చూడండి",
+          "pa": "ਇੱਕੋ ਸਮੇਂ {{Number_of_screens}} {{screens}} 'ਤੇ ਵੇਖੋ",
+          "hr": "एक ही समय में {{Number_of_screens}} {{screens}} पर देखीं"
+        }
+      }
+    },
+    {
+      "ccode": "global",
+      "offers": [
+        {
+          "key": "tvod-test-movie-2",
+          "value": "0-0-425002",
+          "assetIds": [
+            "0-0-425002"
+          ],
+          "endDate": "2021-12-31T00:00:00Z"
+        },
+        {
+          "key": "tvod-test-movie-3",
+          "value": "0-0-1z524029",
+          "assetIds": [
+            "0-0-1z524029"
+          ],
+          "endDate": "2021-12-31T00:00:00Z"
+        },
+        {
+          "key": "combo-supermoon",
+          "value": "0-9-373",
+          "assetIds": [
+            "0-9-373",
+            "0-0-103589",
+            "0-0-132444"
+          ],
+          "endDate": "2021-12-31T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "ccode": "config",
+      "configs": {
+        "auto-suggest": true,
+        "guest-sub-journey": true,
+        "guest-sub-journey-auto-popup": true,
+        "tvod-bundled-subscription-plan": "",
+        "order_summary_enable_upgrade_nudge": true,
+        "subscription_enable_nudge": false,
+        "parental_search_widget_max_count": 5,
+        "custom_featuring_rail_position": 3,
+        "CONSENT_MANAGER": {
+          "registration": false,
+          "guestCheckout": false,
+          "guestRegistration": false
+        },
+        "BUNDLED_SUBSCRIPTION": {
+          "releaseDate": "2022-05-20T00:00:00Z",
+          "movieTitle": "RRR Rental plan",
+          "allowedPlaybackDuration": 24,
+          "billingFrequency": 168,
+          "comboOfferTitle": "Combo",
+          "preBookingSlug": "/videos/details/rrr-tvod-promo/0-0-1z5145144",
+          "movieSlug": "/movies/details/rrr/0-0-1z5145092"
+        },
+        "DATA_COLLECTION": {
+          "B2C_PACK_LIST": [
+            "0-11-2069",
+            "0-11-2070",
+            "0-11-2071",
+            "0-11-2074",
+            "0-11-2075",
+            "0-11-1842",
+            "0-11-1481",
+            "0-11-1483"
+          ],
+          "userType": [
+            "register",
+            "premium"
+          ],
+          "timeOutCount": 3000,
+          "region": [],
+          "genderCaptureEnable": true,
+          "ageCaptureEnable": true,
+          "dobCaptureEnable": false,
+          "genderCapture": {
+            "startCount": 1,
+            "option": [
+              "Male",
+              "Female",
+              "Other"
+            ]
+          },
+          "ageCapture": {
+            "startCount": 2,
+            "option": [
+              "18-24",
+              "25-32",
+              "33-44",
+              "45+"
+            ]
+          },
+          "dobCapture": {
+            "startCount": 10,
+            "male": {
+              "image": "/images/hrithik.png",
+              "header": "Get a chance to win personalised birthday wish from Hrithik!",
+              "title": "You must submit proof of birth date if you win."
+            },
+            "female": {
+              "image": "/images/alia.png",
+              "header": "Personal birthday wishes from Alia Bhatt!",
+              "title": "You must submit proof of birth date if you win."
+            }
+          }
+        }
+      }
+    }
+  ]

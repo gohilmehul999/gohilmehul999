@@ -1,0 +1,51 @@
+<div class="d-flex MEHUL justify-content-left mt-5 gap-2 p-3">
+  <div class="col-md-6">
+    <div class="card cardchildchild p-2">
+      <div class="profile1"> <img [src]="userData.file_path" height="90" width="90" class="rounded-circle" />
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <span class="name">{{userData.name}}</span>
+        <span class="mt-1 braceletid">{{userData.email}}</span>
+        <span class="dummytext p-3">{{userData.mobile}}</span>
+        <span class="dummytext p-1">{{userData.file}}</span>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-3">
+        <button class="btn btn-danger" (click)="deleteuser()" >Delete</button>
+      </div>
+      <div class=" icons d-flex flex-row justify-content-center gap-3 mt-4">
+        <span><i class="fa fa-google"></i></span> <span><i class="fa fa-facebook"></i></span>
+        <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-instagram"></i></span>
+      </div>
+    </div>
+  </div>
+  <!-- update -->
+  <div class="col-md-6">
+    <div class="card cardchildchild p-2">
+      <div class="profile1"> <img [src]="userData.file_path" height="90" width="90" class="rounded-circle" />
+      </div>
+      <form action="" class="from-group" [formGroup]="profileform" (submit)="updateprofile(profileform.value)">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <input type="text" class="form-control input-w mt-1 " placeholder="Updatea name" name="name"
+            formControlName="name" id="name">
+          <input type="file" [accept]="acceptimg" (change)="filefetch($event)" class="form-control input-w mt-1 "
+            placeholder="Select image" name="file" formControlName="file" id="file">
+          <input type="email" class="form-control input-w mt-1 " placeholder="Updatea email" name="email"
+            formControlName="email" id="email">
+          <input type="text" class="form-control input-w mt-1 " placeholder="Update password" name="password"
+            formControlName="password" id="password">
+          <input type="number" class="form-control input-w mt-1 " placeholder="Update mobile number" name="mobile"
+            formControlName="mobile" id="mobile">
+          <button class="btn btn-danger mt-1 input-w form-control">Update</button>
+          <!-- <span class="dummytext p-1">{{userData._id}}</span> -->
+        </div>
+      </form>
+      <div class="d-flex justify-content-center align-items-center mt-3">
+        <!-- <button class="btn btn-danger form-control">edit</button> -->
+      </div>
+      <div class=" icons d-flex flex-row justify-content-center gap-3 mt-4">
+        <span><i class="fa fa-google"></i></span> <span><i class="fa fa-facebook"></i></span>
+        <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-instagram"></i></span>
+      </div>
+    </div>
+  </div>
+</div>

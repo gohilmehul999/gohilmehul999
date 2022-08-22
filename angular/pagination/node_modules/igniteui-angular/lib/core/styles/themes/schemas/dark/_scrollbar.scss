@@ -1,0 +1,61 @@
+@use '../../../base' as *;
+@use '../light/scrollbar' as *;
+
+////
+/// @group schemas
+/// @access public
+/// @author <a href="https://github.com/simeonoff" target="_blank">Simeon Simeonoff</a>
+////
+
+/// Generates a dark scrollbar schema.
+/// @type {Map}
+/// @property {String | Number} size [16px] - The size of the track.
+/// @requires {function} extend
+/// @requires $light-scrollbar
+/// @see $default-palette
+$dark-scrollbar: $light-scrollbar;
+
+/// Generates a dark fluent scrollbar schema.
+/// @type {Map}
+/// @requires {function} extend
+/// @requires $fluent-scrollbar
+$dark-fluent-scrollbar: $fluent-scrollbar;
+
+/// Generates a dark bootstrap scrollbar schema.
+/// @type {Map}
+/// @property {Map} thumb-background [color: ('grays', 50)] - The background color used for the thumb.
+/// @property {Color} track-background [color: ('grays', 50, .3)] - The background color used for the track.
+/// @requires {function} extend
+/// @requires $light-scrollbar
+$dark-bootstrap-scrollbar: extend(
+    $bootstrap-scrollbar,
+    (
+        thumb-background: (
+            color: ('grays', 50)
+        ),
+
+        track-background: (
+            color: ('grays', 50, .3)
+        ),
+    )
+);
+
+/// Generates a dark indigo scrollbar schema.
+/// @type {Map}
+/// @property {Map} thumb-background [color: ('grays', 100)] - The background color used for the thumb.
+/// @property {Color} track-background [color: ('grays', 50)] - The background color used for the track.
+/// @requires {function} extend
+/// @requires $indigo-scrollbar
+$dark-indigo-scrollbar: extend(
+    $indigo-scrollbar,
+    (
+        thumb-background: (
+            color: ('grays', 100)
+        ),
+
+        track-background: (
+            color: ('grays', 50)
+        ),
+    )
+);
+

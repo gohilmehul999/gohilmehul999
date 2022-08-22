@@ -1,0 +1,17 @@
+img {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+}
+
+.card {
+  text-align: center;
+  display: block;
+  width: 60%;
+}
+.bg-secondary{
+  text-align: -webkit-center;
+}
+.mr-3{
+  color: rgb(33, 101, 101);
+}

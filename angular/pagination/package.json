@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "igniteui-angular": "^14.0.12",
+    "materialize-css": "^1.0.0-rc.2",
+    "ngx-pagination": "^6.0.2"
+  }
+}

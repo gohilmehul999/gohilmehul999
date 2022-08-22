@@ -1,0 +1,39 @@
+<p>imagetbl works!</p>
+<form>
+  <input type="file" class="form-control container bg-secondary"  (change)="postdata($event)">
+  <br>
+  upload
+  <input type="file" class="form-control container bg-secondary"  (change)="fetch($event)">
+
+</form>
+<table mat-table class="container" [dataSource]="table">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> name </th>
+    <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="path">
+    <th mat-header-cell *matHeaderCellDef> path </th>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.image_path}} </td> -->
+    <td mat-cell *matCellDef="let element"> <img [src]="element.image_path" /> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="operation" style="text-align:center;">
+    <th mat-header-cell *matHeaderCellDef colspan="2" style="text-align:center;"> operation </th>
+    <td mat-cell *matCellDef="let element" style="text-align:center;"> <button class="btn btn-success" (click)="updateimg(element._id)">edit</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="operation2" >
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element" style="text-align:center;"> <button class="btn btn-danger" (click)="deleteimg(element._id)" >delete</button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

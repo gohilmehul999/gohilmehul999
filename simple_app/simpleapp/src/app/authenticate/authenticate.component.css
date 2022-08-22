@@ -1,0 +1,11 @@
+.row{
+  justify-content: center;
+  top: 8%;
+  position: relative;
+}
+span{
+  color: red;
+}
+.sign-txt a{
+  color:rgb(0 123 255);
+}

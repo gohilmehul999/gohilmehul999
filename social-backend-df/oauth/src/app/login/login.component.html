@@ -1,0 +1,7 @@
+<div *ngIf="islogin()">
+<div class="container">welcome</div>
+<div class="container">name:{{userinfo?.info?.name}}</div>
+<div class="container">email:{{userinfo?.info?.email}}</div>
+<div class="container"><img [src]="userinfo?.info?.picture"></div>
+<button mat-raised-button (click)="islogout()">logout</button>
+</div>

@@ -1,0 +1,79 @@
+<p>reactive works!</p>
+<div class="container rounded bg-secondary">
+  <h1 class="text-center">Reactive Form</h1>
+  <form action="" [formGroup]="reactfrom" class="container" (submit)="submit(reactfrom.value)">
+    <div>
+      <input placeholder="enter name" class=" container form-control mt-2" formControlName="name" type="text"
+        name="name">
+      <span *ngIf="(name && name.invalid) && (name.touched)" class="ml-1">required username</span>
+    </div>
+    <!-- password -->
+    <div class="input-group">
+
+      <input required placeholder="enter password" minlength="6" maxlength="35" class=" container form-control mt-2" (keypress)="passwordvalidation($event)" formControlName="password"
+        type="password" name="password" [type]="show ? 'text': 'password'">
+
+      <div class="input-group-text mehul">
+        <span matSuffix *ngIf="show then visibility_off else visibility" (click)="togglePasswordVisibility()"></span>
+      </div>
+      <ng-template #visibility_off><i (click)="togglePasswordVisibility()" style='font-size:24px'
+          class='far icon'>&#xf070;</i></ng-template>
+      <ng-template #visibility> <i (click)="togglePasswordVisibility()" style='font-size:24px'
+          class='far icon'>&#xf06e;</i></ng-template>
+      <span *ngIf="password?.errors?.minlength" class="ml-1 password">Password must be at least 6 characters long.</span>
+      <span *ngIf="password?.errors?.pattern" class="ml-1 password">Password should contain minimum one number,<br>one character and <br> one special
+        character</span>
+      <span *ngIf="(password && password?.errors?.required ) && (password.touched)" class="ml-1 password">Password required</span>
+
+    </div>
+    <!-- comform password -->
+    <div>
+<div class="input-group">
+
+      <input required placeholder="enter comform password" minlength="6" maxlength="35" class=" container form-control mt-2" (keydown)="passwordvalidationcnfm($event)" formControlName="comformpassword"
+        type="password" name="comformpassword" [type]="comformshow ? 'text': 'password'">
+
+      <div class="input-group-text mehul">
+        <span matSuffix *ngIf="comformshow then visibility_off1 else visibility1" (click)="conformtogglePasswordVisibility()"></span>
+      </div>
+      <ng-template #visibility_off1><i (click)="conformtogglePasswordVisibility()" style='font-size:24px'
+          class='far icon'>&#xf070;</i></ng-template>
+      <ng-template #visibility1> <i (click)="conformtogglePasswordVisibility()" style='font-size:24px'
+          class='far icon'>&#xf06e;</i></ng-template>
+      <span *ngIf="comformpassword?.errors?.minlength" class="ml-1 password">Password must be at least 6 characters long.</span>
+      <span *ngIf="(comformvalue !== notmatch)" class="ml-1 password">not match password</span>
+      <span *ngIf="(comformpassword && comformpassword?.errors?.required ) && (comformpassword.touched)" class="ml-1 password">Password required</span>
+
+    </div>
+    </div>
+    <div>
+      <input placeholder="enter email" class=" container form-control mt-2" formControlName="email" required
+        type="email" name="email">
+
+      <span *ngIf="(email && email.invalid) && (email.touched)" class="  ml-1">invalid email</span>
+
+    </div>
+    <!-- number -->
+    <div>
+      <input placeholder="enter mobile number" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+        class=" container form-control mt-2" formControlName="mobile" type="number" name="mobile">
+      <span *ngIf="(mobile && mobile.invalid) && (mobile.touched)" class=" ml-1">required 10 digits
+        number</span>
+
+    </div>
+    <!-- file -->
+    <div class="mb-3">
+      <div class="pt-3">
+        <div class="input-group custom-file-button">
+          <label class="input-group-text" for="inputGroupFile">upload</label>
+          <input placeholder="select file" formControlName="file" [accept]="acceptimg" (change)="filefetch($event)" type="file" class="form-control" id="inputGroupFile">
+        </div>
+      </div>
+      <span *ngIf="(file && file.invalid) && (file.touched)" class=" ml-1">Select file</span>
+    </div>
+    <div>
+      <button class="container btn btn-primary mt-1">submit</button>
+
+    </div>
+  </form>
+</div>

@@ -1,0 +1,108 @@
+img {
+  width: 100%;
+  position: relative;
+}
+
+.hero_caption {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  padding-left: 15px;
+}
+
+.hero_caption span {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin-bottom: 39px;
+  color: rgb(236 91 83);
+  margin-bottom: 37px;
+  text-transform: uppercase;
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.hero_caption h1 {
+  font-size: 50px;
+  padding-left: 15px;
+  line-height: 1.2;
+}
+
+.hero_caption p {
+  color: rgb(70 77 101);
+  margin-bottom: 42px;
+  padding-left: 15px;
+  width: 57%;
+}
+
+.hero-btn {
+  background: rgb(236 91 83);
+  margin-right: 1%;
+}
+
+.btn-outline {
+  border-color: rgb(236 91 83);
+}
+
+.col-12 {
+  padding-top: 195px;
+  padding-bottom: 90px;
+  display: -webkit-box;
+}
+.cardcol12{
+  padding-top: 70px;
+  padding-bottom: 40px;
+  display: -webkit-box;
+}
+.cardcol13{
+  padding-top: 0px;
+  padding-bottom: 90px;
+  display: -webkit-box;
+}
+i{
+  font-size: 48px;
+    display: flex;
+    place-content: center;
+    margin-top: 10vh;
+}
+mat-card{
+  background: rgb(236 91 83);
+  height: 70vh;
+}
+mat-card-title{
+  text-align: center;
+}
+.banner{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.banner h2{
+  color: rgb(236 91 83);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top:40%
+}
+.banner a{
+  float: right;
+  background: rgb(236 91 83);
+  position: absolute;
+  z-index: 1;
+  top:40%;
+  left:75%;
+}
+.icon{
+  width: 10%;
+
+}
+.icongroup{
+  display: -webkit-box;
+  display: flex;
+    place-content: space-around;
+    margin: 115px 0px 115px 0px;
+}

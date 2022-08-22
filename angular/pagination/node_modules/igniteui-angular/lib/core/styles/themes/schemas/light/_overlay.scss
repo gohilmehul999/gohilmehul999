@@ -1,0 +1,40 @@
+@use '../../../base' as *;
+
+////
+/// @group schemas
+/// @access public
+/// @author <a href="https://github.com/desig9stein" target="_blank">Marin Popov</a>
+////
+
+/// Generates a light overlay schema.
+/// @type {Map}
+/// @property {Map} background-color [color: ('grays', 500)] - The background color used for modal overlays.
+/// @see $default-palette
+$light-overlay: (
+    background-color: (
+        color: ('grays', 500, .54)
+    )
+);
+
+/// Generates a fluent overlay schema.
+/// @type {Map}
+/// @property {Color} background-color [rgba(255, 255, 255, .4)] - The background color used for modal overlays.
+/// @requires {function} extend
+/// @requires {Map} $light-overlay
+$fluent-overlay: extend(
+    $light-overlay,
+    (
+        background-color: rgba(255, 255, 255, .4)
+    )
+);
+
+/// Generates a bootstrap overlay schema.
+/// @type {Map}
+/// @requires {Map} $light-overlay
+$bootstrap-overlay: $light-overlay;
+
+/// Generates an indigo overlay schema.
+/// @type {Map}
+/// @requires {Map} $light-overlay
+$indigo-overlay: $light-overlay;
+

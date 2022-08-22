@@ -1,0 +1,51 @@
+
+ <!-- (ngSubmit)="formput(formdata.value)" -->
+  <form action="" #formdata="ngForm" (ngSubmit)="data(formdata.value)">
+
+    <div class="form-group container">
+
+      <p class="text-center bg-success form-control mt-2">User Detail Form</p>
+
+      <input type="text" [(ngModel)]="contact.fname" #fname="ngModel" required name="fname" placeholder="first name" id=""
+        class="form-control mt-1">
+      <span *ngIf="fname.invalid && fname.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.lname" #lname="ngModel" required name="lname" placeholder="last name" id=""
+        class="form-control mt-1">
+      <span *ngIf="lname.invalid && lname.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.mobile" #mobile="ngModel" required name="mobile" placeholder="mobile" id=""
+        class="form-control mt-1">
+      <span *ngIf="mobile.invalid && mobile.touched" style="color: red;">enter valid input</span>
+
+      <input type="email" [(ngModel)]="contact.email" #email="ngModel" required name="email" placeholder="email" id=""
+        class="form-control mt-1">
+      <span *ngIf="email.invalid && email.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.dob" #dob="ngModel" required name="dob" placeholder="date of birth" id=""
+        class="form-control mt-1">
+      <span *ngIf="dob.invalid && dob.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.city" #city="ngModel" required name="city" placeholder="city" id=""
+        class="form-control mt-1">
+      <span *ngIf="city.invalid && city.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.pincode" #pincode="ngModel" required name="pincode" placeholder="pincode"
+        id="" class="form-control mt-1">
+      <span *ngIf="pincode.invalid && pincode.touched" style="color: red;">enter valid input</span>
+
+      <input type="text" [(ngModel)]="contact.state" #state="ngModel" required name="state" placeholder="state" id=""
+        class="form-control mt-1">
+      <span *ngIf="state.invalid && state.touched" style="color: red;">enter valid input</span>
+
+      <input type="password" [(ngModel)]="contact.password" #password="ngModel" required name="password"
+        placeholder="password" id="" class="form-control mt-1">
+      <span *ngIf="password.invalid && password.touched" style="color: red;">enter valid input</span>
+
+      <input type="file" [(ngModel)]="contact.file" #file="ngModel" (change)="filefetch($event)" required name="file"
+      placeholder="file" id="" class="form-control mt-1">
+    <span *ngIf="file.invalid && file.touched" style="color: red;">enter valid input</span>
+
+      <button class="btn btn-success form-control mt-1" type="submit" #issubmit >submit</button>
+    </div>
+  </form>

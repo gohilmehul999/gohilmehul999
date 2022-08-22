@@ -1,0 +1,180 @@
+<!-- <div class="container-fluid">
+<button mat-button color="primary">add</button>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Title</mat-card-title>
+        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        Text content
+    </mat-card-content>
+    <mat-card-actions align="start">
+        <button mat-button>ok</button>
+
+    </mat-card-actions>
+</mat-card>
+
+<mat-checkbox value="" color="primary">Checkbox label</mat-checkbox>
+<mat-chip-list>
+    <mat-chip >Chip 1</mat-chip>
+    <mat-chip color="primary" selected>Chip 2</mat-chip>
+</mat-chip-list>
+
+
+
+    <h1>Choose a date</h1>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <button (click)="opendialogbox()">dialog box</button>
+
+
+    <mat-divider></mat-divider>
+
+
+
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Self aware panel
+          </mat-panel-title>
+          <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+    </mat-accordion><br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput>
+</mat-form-field>
+
+<mat-grid-list cols="2" rowHeight="fit"  [style.height]="'100px'" [gutterSize]="'1px'">
+    <mat-grid-tile style="background-color:aqua" [colspan]="2" [rowspan]="1">Tile 1</mat-grid-tile>
+    <mat-grid-tile style="background-color:rgb(9, 230, 230)" [colspan]="1" [rowspan]="1">Tile 2</mat-grid-tile>
+    <mat-grid-tile style="background-color:rgb(16, 165, 165)" [colspan]="1" [rowspan]="1">Tile 3</mat-grid-tile>
+</mat-grid-list>
+
+
+<mat-icon>home</mat-icon>
+
+<mat-list dense>
+    <mat-list-item *ngFor="let item of items">
+        {{item}}
+    </mat-list-item>
+</mat-list>
+
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<mat-paginator length="100" pageSize="10"></mat-paginator>
+
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar mode="determinate"></mat-progress-bar>
+<mat-progress-bar mode="buffer"></mat-progress-bar>
+
+<mat-progress-spinner mode="determinate" [value]="40" color="primary"></mat-progress-spinner>
+<mat-progress-spinner mode="indeterminate" [value]="40" color="accent"></mat-progress-spinner>
+
+<mat-radio-group color="warn" [(ngModel)]="modelName" align="start">
+    <mat-radio-button *ngFor="let choice of choices" name="modelName" [value]="choice">
+        choice
+    </mat-radio-button>
+</mat-radio-group>
+
+<div style="background-color: aquamarine;
+width: 220px;
+height: 151px;
+margin-bottom: 12px;" class="ripple" matRippleColor="red" [matRippleRadius]="rippleradius" matRipple>
+ripple
+</div>
+
+<mat-select style="width: 120px; margin-bottom:1%; background-color: rgb(48, 158, 48);" formControlName="formControlName" placeholder="select">
+    <mat-option *ngFor="let choice of choices2" [value]="choice">
+        choice
+    </mat-option>
+</mat-select>
+
+<mat-sidenav-container>
+    <mat-sidenav #startSidenavRef mode="over" align="start" opened>
+        Start sidenav content
+    </mat-sidenav>
+
+<button (click)="startSidenavRef.toggle()">toggle</button>
+</mat-sidenav-container>
+
+
+<mat-slide-toggle>slide toggle</mat-slide-toggle>
+
+<mat-slider [(ngModel)]="modelName" min="1" max="100" step="1"></mat-slider>
+
+<input type="text" matInput #message value="Pizza party!!! 🍕
+">
+<input type="text" matInput #action value="dance
+">
+<mat-form-field appearance="fill">
+  <mat-label>Horizontal position</mat-label>
+  <mat-select [(value)]="horizontalPosition">
+    <mat-option value="start">Start</mat-option>
+    <mat-option value="center">Center</mat-option>
+    <mat-option value="end">End</mat-option>
+    <mat-option value="left">Left</mat-option>
+    <mat-option value="right">Right</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Vertical position</mat-label>
+  <mat-select [(value)]="verticalPosition">
+    <mat-option value="top">Top</mat-option>
+    <mat-option value="bottom">Bottom</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button (click)="opensnackbar(message.value,action.value)">open snackbar</button>
+
+
+<mat-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Fill out your name</ng-template>
+<mat-label matsteplable>step1</mat-label>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Fill out your name</ng-template>
+    <mat-label>step2</mat-label>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>
+          Fill out your name</ng-template>
+        <mat-label>step3</mat-label>
+          </mat-step>
+</mat-stepper>
+
+
+<mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+
+<mat-toolbar>
+  <button mat-icon-button >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+<span>header</span>
+</mat-toolbar>
+
+<button matTooltipShowDelay="500" matTooltip="detail about tooltip">tooltip </button>
+
+</div> -->
+<router-outlet></router-outlet>

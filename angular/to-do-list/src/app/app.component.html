@@ -1,0 +1,27 @@
+<div class="mt-5 container">
+  <input type="text" class="form-control" placeholder="to do list" #value>
+  <input type="submit" (click)="getvalue(value.value)" class="btn form-control btn-primary" value="submit">
+</div>
+<div class="container mt-5">
+  <span class="row" *ngFor="let data of list">
+
+    <li class="col-2 bg-info" >{{data[0].id}}</li>
+    <li class="col-6 bg-info" >{{data[0].name}}</li>
+    <button class="col-1 btn btn-danger" (click)="remove(data[0].id)">remove</button>
+  </span>
+</div>
+
+<p *ngFor="let data of student">
+  <app-child [student]="data"></app-child>
+</p>
+<!-- <app-child [item]="data"></app-child> -->
+
+<div class="container">
+  <input type="text" [(ngModel)]="name">
+  <p appRedel >{{name}}</p>
+</div>
+
+<button class="btn btn-success" routerLink="about/company">company</button>
+<button class="btn btn-success" routerLink="about">about</button>
+<button class="btn btn-success" routerLink="about/aboutme">me</button>
+<button class="btn btn-success" routerLink="home">home</button>

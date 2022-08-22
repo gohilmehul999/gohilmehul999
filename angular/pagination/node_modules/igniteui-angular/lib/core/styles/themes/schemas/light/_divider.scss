@@ -1,0 +1,31 @@
+////
+/// @group schemas
+/// @access public
+/// @author <a href="https://github.com/simeonoff" target="_blank">Simeon Simeonoff</a>
+////
+
+/// Generates a light divider schema.
+/// @type {Map}
+/// @property {Map} color [color: ('grays', 300)] - The color used for the divider.
+/// @see $default-palette
+$light-divider: (
+    color: (
+        color: ('grays', 300)
+    )
+);
+
+/// Generates a fluent divider schema.
+/// @type {Map}
+/// @requires {Map} $light-divider
+$fluent-divider: $light-divider;
+
+/// Generates a bootstrap divider schema.
+/// @type {Map}
+/// @requires {function} extend
+$bootstrap-divider: $light-divider;
+
+/// Generates an indigo divider schema.
+/// @type {Map}
+/// @requires {function} extend
+$indigo-divider: $light-divider;
+

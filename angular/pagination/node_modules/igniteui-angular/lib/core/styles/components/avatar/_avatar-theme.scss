@@ -1,0 +1,176 @@
+@use '../../base' as *;
+@use '../../themes/schemas' as *;
+@use 'sass:map';
+
+////
+/// @group themes
+/// @access public
+/// @author <a href="https://github.com/simeonoff" target="_blank">Simeon Simeonoff</a>
+/// @author <a href="https://github.com/desig9stein" target="_blank">Marin Popov</a>
+////
+
+/// If only background color is specified, text/icon color will be assigned automatically to a contrasting color.
+/// @param {Map} $palette [null] - The palette used as basis for styling the component.
+/// @param {Map} $schema [$light-schema] - The schema used as basis for styling the component.
+/// @param {Color} $color [null] - The text color used of the avatar.
+/// @param {Color} $background [null] - The background color used of the avatar.
+/// @param {number} $border-radius [null] - The border-radius used of the avatar.
+/// @param {number} $size [null] - The size of the avatar.
+/// @requires $default-palette
+/// @requires $light-schema
+/// @requires apply-palette
+/// @requires text-contrast
+/// @requires extend
+///
+/// @example scss Change the background and icon colors in icon avatars
+///   $my-avatar-theme: avatar-theme($icon-background: black, $icon-color: white);
+///   // Pass the theme to the avatar component mixin
+///   @include avatar($my-avatar-theme);
+@function avatar-theme(
+    $palette: null,
+    $schema: $light-schema,
+    $background: null,
+    $color: null,
+    $border-radius: null,
+    $size: null,
+) {
+    $name: 'igx-avatar';
+    $avatar-schema: ();
+
+    @if map.has-key($schema, $name) {
+        $avatar-schema: map.get($schema, $name);
+    } @else {
+        $avatar-schema: $schema;
+    }
+
+    $theme: apply-palette($avatar-schema, $palette);
+
+    @if not($color) and $background {
+        $color: text-contrast($background);
+    }
+
+    @if not($border-radius) {
+        $border-radius: border-radius(map.get($theme, 'border-radius'));
+    }
+
+    @return extend($theme, (
+        name: $name,
+        palette: $palette,
+        background: $background,
+        color: $color,
+        border-radius: $border-radius,
+        size: $size
+    ));
+}
+
+/// @param {Map} $theme - The theme used to style the component.
+/// @requires {mixin} css-vars
+/// @requires rem
+/// @requires var-get
+@mixin avatar($theme) {
+    @include css-vars($theme);
+
+    $size: map.get($theme, 'size');
+    $small-size: rem(40px);
+    $medium-size: rem(64px);
+    $large-size: rem(88px);
+
+    $variant: map.get($theme, variant);
+    $bootstrap-theme: $variant == 'bootstrap';
+
+    $box-shadow: map.get((
+        material: null,
+        fluent: null,
+        bootstrap: 0 0 0 rem(3px) var-get($theme, 'background'),
+        indigo-design: null,
+    ), $variant);
+
+    %igx-avatar-outline {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        opacity: .5;
+    }
+
+    %igx-avatar-display {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        color: var-get($theme, 'color');
+        background: var-get($theme, 'background');
+        vertical-align: middle;
+        border-radius: var-get($theme, 'border-radius');
+        outline-style: none;
+        flex-shrink: 0;
+
+        &::after {
+            box-shadow: none;
+            @if $bootstrap-theme {
+                @extend %igx-avatar-outline;
+            }
+            transition: box-shadow .15s $ease-in-out-quad;
+        }
+
+        &:focus::after {
+            box-shadow: $box-shadow;
+        }
+    }
+
+    %igx-avatar-image {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: var-get($theme, 'background');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    %igx-avatar--rounded {
+        --igx-avatar-border-radius: #{rem(44px)};
+    }
+
+    %igx-avatar--initials {
+        text-transform: uppercase;
+    }
+
+    %igx-avatar-initials--small {
+        --size: #{$size or $small-size};
+        font-size: calc(#{var-get(('size': $size or $small-size), 'size')} / 2);
+        line-height: calc(#{var-get(('size': $size or $small-size), 'size')} / 2);
+    }
+
+    %igx-avatar-initials--medium {
+        --size: #{$size or $medium-size};
+        font-size: calc(#{var-get(('size': $size or $medium-size), 'size')} / 2);
+        line-height: calc(#{var-get(('size': $size or $medium-size), 'size')} / 2);
+    }
+
+    %igx-avatar-initials--large {
+        --size: #{$size or $large-size};
+        font-size: calc(#{var-get(('size': $size or $large-size), 'size')} / 2);
+        line-height: calc(#{var-get(('size': $size or $large-size), 'size')} / 2);
+    }
+
+    %igx-avatar--small {
+        --size: #{$size or $small-size};
+        width: var-get(('size': $size or $small-size), 'size');
+        height: var-get(('size': $size or $small-size), 'size');
+    }
+
+    %igx-avatar--medium {
+        --size: #{$size or $medium-size};
+        width: var-get(('size': $size or $medium-size), 'size');
+        height: var-get(('size': $size or $medium-size), 'size');
+    }
+
+    %igx-avatar--large {
+        --size: #{$size or $large-size};
+        width: var-get(('size': $size or $large-size), 'size');
+        height: var-get(('size': $size or $large-size), 'size');
+    }
+}

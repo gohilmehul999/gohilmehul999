@@ -1,0 +1,45 @@
+@use '../../../base' as *;
+
+////
+/// @group schemas
+/// @access public
+/// @author <a href="https://github.com/desig9stein" target="_blank">Marin Popov</a>
+////
+
+/// Generates a light icon schema.
+/// @type {Map}
+///
+/// @property {Color} color ["'currentColor'"] - The icon color.
+/// @property {String} size [rem(24px)] - The icon size.
+/// @property {Color} disabled-color ["'currentColor'"] - The disabled icon color.
+///
+/// @see $default-palette
+$light-icon: (
+    color: "'currentColor'",
+    size: rem(24px),
+    disabled-color: "'currentColor'"
+);
+
+/// Generates a fluent icon schema.
+/// @type {Map}
+/// @requires {Map} $light-icon
+$fluent-icon: $light-icon;
+
+/// Generates a bootstrap icon schema.
+/// @type {Map}
+/// @requires {Map} $light-icon
+$bootstrap-icon: $light-icon;
+
+/// Generates an indigo icon schema.
+/// @type {Map}
+/// @property {Map} disabled-color [color: ('grays', 400)] - The disabled icon color.
+/// @requires {function} extend
+/// @requires {Map} $light-icon
+$indigo-icon: extend(
+    $light-icon,
+    (
+        disabled-color: (
+            color: ('grays', 400)
+        )
+    )
+);

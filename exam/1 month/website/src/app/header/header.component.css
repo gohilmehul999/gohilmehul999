@@ -1,0 +1,29 @@
+.flt{
+  float: right;
+}
+.header-btn{
+  background:rgb(236 91 83);
+}
+a{
+  padding: 27px 13px;
+  margin: 0 5px;
+}
+a:hover{
+  color: rgb(236, 91, 83);
+}
+.main-header{
+  background-color: #ffffff;
+  box-shadow:1px -3px 36px -4px #888888;
+
+}
+a img{
+  padding: 14.5px 13px;
+  margin: 0 10px;
+}
+.button-5{
+  background:rgb(236, 91, 83);
+  transition: background .5s;
+}
+.button-5:hover{
+  background:rgb(202, 103, 98);
+}

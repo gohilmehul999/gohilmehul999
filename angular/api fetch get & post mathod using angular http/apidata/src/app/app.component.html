@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngFor="let user of users">
+<li>{{user.id}}</li>
+<li>{{user.name}}</li>
+  </div>
+</div>
+
+
+
+<form #formdata="ngForm" (ngSubmit)="submit(formdata.value)">
+  <input type="text" ngModel name="id" id="id">
+  <input type="text" ngModel name="name" id="name">
+  <input type="text" ngModel name="username" id="username">
+  <input type="text" ngModel name="email" id="email">
+  <input type="submit" name="submit" id="submit">
+</form>

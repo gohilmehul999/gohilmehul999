@@ -1,0 +1,98 @@
+@use '../../../base' as *;
+
+////
+/// @group schemas
+/// @access public
+/// @author <a href="https://github.com/simeonoff" target="_blank">Simeon Simeonoff</a>
+/// @author <a href="https://github.com/desig9stein" target="_blank">Marin Popov</a>
+////
+
+/// Generates a light splitter schema.
+/// @type {Map}
+/// @property {Map} icon-background [color: ('grays', 400)]- The background color used for splitters of type icon.
+/// @property {Map} bar-color [color: ('grays', 200)] - The background color of the bar.
+/// @property {Map} handle-color [color: ('grays', 400)] - The color for the bar drag handle.
+/// @property {Map} expander-color [color: ('grays', 400)] - The color for the arrow expander's.
+/// @property {Number} border-radius [2px] - The border radius used for splitter. Can be a fraction between 0 and 1, pixels, or percent.
+/// @property {Map} focus-color [color: ('secondary', 500)] - The color used for focused splitter bar.
+/// @property {Number} size [4px] - The size of the splitter, it's width for vertical and height for horizontal splitter.
+/// @requires {function} extend
+/// @see $default-palette
+$light-splitter: extend(
+    (
+        variant: 'material',
+
+        bar-color: (
+            color: ('grays', 200)
+        ),
+
+        focus-color: (
+            color: ('secondary', 500)
+        ),
+
+        handle-color: (
+            color: ('grays', 400)
+        ),
+
+        expander-color: (
+            color: ('grays', 400)
+        ),
+
+        size: 4px,
+
+        border-radius: rem(2px)
+    )
+);
+
+/// Generates a fluent splitter schema.
+/// @type {Map}
+/// @requires {function} extend
+/// @requires {Map} $light-splitter
+$fluent-splitter: extend(
+    $light-splitter,
+    (
+        variant: 'fluent',
+    )
+);
+
+/// Generates a bootstrap splitter schema.
+/// @type {Map}
+/// @requires {function} extend
+/// @requires {Map} $light-splitter
+$bootstrap-splitter: extend(
+    $light-splitter,
+    (
+        variant: 'bootstrap',
+    )
+);
+
+/// Generates an indigo splitter schema.
+/// @type {Map}
+/// @property {Map} bar-color [color: ('grays', 400)] - The background color of the bar.
+/// @property {Map} handle-color [color: ('surface')] - The color for the bar drag handle.
+/// @property {Map} expander-color [color: ('surface')] - The color for the bar drag handle.
+/// @property {Map} focus-color [color: ('primary', 500)] - The color used for focused splitter bar.
+/// @requires {function} extend
+/// @requires {Map} $light-splitter
+$indigo-splitter: extend(
+    $light-splitter,
+    (
+        variant: 'indigo-design',
+
+        bar-color: (
+            color: ('grays', 400)
+        ),
+
+        focus-color: (
+            color: ('primary', 500)
+        ),
+
+        handle-color: (
+            color: ('surface')
+        ),
+
+        expander-color: (
+            color: ('surface')
+        )
+    )
+);
