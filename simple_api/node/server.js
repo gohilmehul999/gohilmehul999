@@ -22,8 +22,8 @@ app.use(function (req, res, next) {
 
     next();
 });
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
 app.use('/api', approute);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,7 +31,7 @@ var PORT = process.env.port || 8080
 app.use(morgan('dev'));
 app.use(express.static('./image_upload'));
 
-//mongoose database connection
+//mongoose database connection  
 const url = 'mongodb://localhost:27017/mydb';
 mongoose.connect(url, {
     useNewUrlParser: true,

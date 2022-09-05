@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import {
-  GoogleLoginProvider,
+  GoogleLoginProvider,FacebookLoginProvider
 } from '@abacritt/angularx-social-login';
 import {HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -32,7 +32,7 @@ import {MatButtonModule} from '@angular/material/button'
     {
       provide: 'SocialAuthServiceConfig',
       useValue: {
-        autoLogin: true,
+        autoLogin: false,
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
@@ -40,10 +40,10 @@ import {MatButtonModule} from '@angular/material/button'
               '278314521098-rv35n2k98k8algiq94g8vm2klsvstdl9.apps.googleusercontent.com'
             )
           },
-          // {
-          //   id: FacebookLoginProvider.PROVIDER_ID,
-          //   provider: new FacebookLoginProvider('clientId')
-          // }
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('381534474165632')
+          }
         ],
         onError: (err) => {
           console.error(err);

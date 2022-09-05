@@ -1,0 +1,9 @@
+#home {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-rows: auto;
+}
+
+#home {
+  display: inline-flex;
+}

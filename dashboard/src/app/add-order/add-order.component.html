@@ -1,0 +1,57 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <div>
+          <span class="float-right">date:</span><br>
+          <br>
+          <span class="float-right">time:</span>
+        </div>
+        <div class="container">
+          <div class="form-group">
+            <span><b>Customer Name</b></span><input class="form-control mb-2" type="text" name="c_name">
+            <span><b>Customer Address</b></span><input class="form-control mb-2" type="text" name="c_address">
+            <span><b>Customer phone</b></span><input class="form-control mb-2" type="text" name="c_phone">
+
+            <div class="inline">
+              <tr>
+                <td> <span><b>Customer product:</b></span></td>
+                <td>
+                  <mat-form-field>
+                    <mat-select placeholder="topic" [(value)]="selectedvalue">
+                      <mat-option *ngFor="let data of options" [value]="data">{{data}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td><span><b>QTY:</b></span></td>
+                <td>
+                  <mat-form-field class="example-full-width" appearance="standard"><input matInput type="text" required
+                      placeholder="Enter Qty"></mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td><span><b>Rate:</b></span></td>
+                <td>
+                  <mat-form-field class="example-full-width" appearance="standard"><input matInput type="text" required
+                      placeholder="Enter Qty"></mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td><span><b>Amount :</b></span></td>
+                <td>
+                  <mat-form-field class="example-full-width" appearance="standard"><input matInput disabled=""
+                      [(ngModel)]='amount' required placeholder="Enter Qty"></mat-form-field>
+                </td>
+              </tr>
+            </div>
+            <button class="btn mehul" type="submit">Create Order</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

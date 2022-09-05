@@ -1,0 +1,32 @@
+<!-- <div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">total Orders</h6>
+                    <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i>&nbsp;<span>486</span></h2>
+                </div>
+            </div>
+        </div>
+	</div>
+</div> -->
+<button mat-button (click)="cardnow()">
+  <mat-icon [matBadge]=count *ngIf="iscard">shopping_cart</mat-icon>
+</button>
+<ng-container *ngFor="let element of record;">
+  <div class="card">
+    <div class="card-body">
+      <div>
+        <img [src]="element.image" class="card-img">
+      </div>
+      <div style="margin-left: 12px;">
+        <mat-checkbox (change)="checkvalue($event,element)" class="float-right"
+          color="primary">
+        </mat-checkbox>
+        <h5 class="card-title">{{element.name}}</h5>
+        <p class="card-text"><b>{{element.price}}</b></p>
+        <p>{{element.description}} </p>
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,9 +1,9 @@
-
   <asl-google-signin-button type='standard' size='medium' shape='rectangular' logo_alignment="center" text="signup_with" width='400' theme="outline" *ngIf="!user"></asl-google-signin-button>
 <div *ngIf="user">
   <section class="vh-50" style="background-color: #9de2ff;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
+        <h1 class="text-center">provider:{{user.provider}}</h1>
         <div class="col col-md-9 col-lg-7 col-xl-5">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-4">
@@ -41,4 +41,7 @@
       </div>
     </div>
   </section>
+</div>
+<div *ngIf="!user">
+  <button type="button" (click)="loginWithFacebook()" class="btn btn-primary btn-block">Signin with Facebook</button>
 </div>

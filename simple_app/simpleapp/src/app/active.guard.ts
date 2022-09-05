@@ -8,7 +8,6 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from './service/api.service';
-import { AuthTokenService } from './service/auth-token.service';
 
 @Injectable({
   providedIn: 'root',
@@ -17,8 +16,7 @@ export class ActiveGuard implements CanActivate {
   // constructor
   constructor(
     private router: Router,
-    private api: ApiService,
-    private authtoken: AuthTokenService
+    private api: ApiService
   ) {}
 
   canActivate(
