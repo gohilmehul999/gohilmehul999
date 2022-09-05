@@ -4,6 +4,7 @@ import jsPDF from 'jspdf';
 import Swal from 'sweetalert2';
 import html2canvas from 'html2canvas';
 import { Router } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-cartnow',
@@ -14,29 +15,21 @@ export class CartnowComponent implements OnInit {
   @ViewChild('register_details', { static: true }) content: any;
 
   constructor(private api: ApiserviceService, private router: Router) {}
-  quantity: any = '1';
+  quantity: any = 1;
   data: any;
   record: any;
-  cart: any;
+  cart: any = [];
   txtNumber: any = 1;
   category: any;
+  cartdatasource = new MatTableDataSource();
+  length!: number;
   ngOnInit(): void {
     this.api.showorder().subscribe((data) => {
       this.data = data;
       this.record = this.data.message;
       this.cart = JSON.parse(localStorage.getItem('cartdetail') || '[]');
       console.log('SESSION', this.cart);
-
-      if (this.cart) {
-        for (let i = 0; this.record.length > i; i++) {
-          console.log(i);
-          console.log('category', this.category);
-
-          this.category = this.cart.filter(
-            (c: any) => (c._id = this.cart[i]._id)
-          );
-        }
-      }
+      this.cartdatasource = this.cart;
     });
   }
 
@@ -46,14 +39,15 @@ export class CartnowComponent implements OnInit {
       icon: 'success',
       title: 'Your Bill has been download momentary',
       showConfirmButton: false,
-      timer: 3000,
+      timer: 1000,
     });
+
     setTimeout(() => {
       this.generarPDF();
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
-      this.router.navigate(['/main/dashboard']);
-    }, 2500);
+      this.router.navigate(['/admin/dashboard']);
+    }, 1500);
   }
 
   generarPDF() {
@@ -62,7 +56,7 @@ export class CartnowComponent implements OnInit {
 
     const options = {
       background: 'white',
-      scale: 3,
+      scale: 6,
     };
 
     html2canvas(el1, options)
@@ -70,13 +64,11 @@ export class CartnowComponent implements OnInit {
         var img = canvas.toDataURL('image/PNG');
         var doc = new jsPDF('l', 'mm', 'a4');
 
-        // Add image Canvas to PDF
         const bufferX = 100;
         const bufferY = 0;
         const imgProps = (<any>doc).getImageProperties(img);
         const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-        // console.log("pdfHeight :", pdfHeight + " pdfWidth :" , pdfWidth);
         doc.addImage(
           img,
           'PNG',
@@ -118,8 +110,22 @@ export class CartnowComponent implements OnInit {
     this.quantity = cnt.target.value;
   }
 
+  remove(id: any) {
+    // console.log(id);
+    for (var i = 0; i < this.cart.length; i++) {
+      var obj = this.cart[i];
+      // console.log('object',this.cart[i]);
+
+      if (id === obj._id) {
+        this.cart.splice(i, 1);
+      }
+    }
+    this.cartdatasource = new MatTableDataSource(this.cart);
+    this.length = this.cart.length;
+  }
+
   getTotalCost() {
-    return this.category
+    return this.cart
       .map((t: any) => t.price * t.quantity)
       .reduce((acc: any, value: any) => acc + value, 0);
   }

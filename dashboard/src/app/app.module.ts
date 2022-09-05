@@ -33,6 +33,8 @@ import { CartnowComponent } from './cartnow/cartnow.component';
 import {MatBadgeModule} from '@angular/material/badge'
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,12 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule,
     MatCardModule,
     MatCheckboxModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot({
+      closeButton: true,
+      timeOut: 15000, // 15 seconds
+      progressBar: true,
+    })
   ],
   providers: [
     ApiserviceService,

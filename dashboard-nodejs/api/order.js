@@ -19,6 +19,7 @@ module.exports = function (reg) {
         regitem.description = req.body.description;
         regitem.price = req.body.price;
         regitem.image = 'http://localhost:8000/'+req.file.filename;
+        
         regitem.save(function (err) {
             if (err) {
                 if (err.error != null) {

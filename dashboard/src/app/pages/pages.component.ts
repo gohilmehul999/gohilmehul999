@@ -12,7 +12,7 @@ export class PagesComponent implements OnInit {
   count: any = 0;
   data: any = [];
   record: any = [];
-  cartlist: any =[];
+  cartlist: any = [];
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -48,5 +48,5 @@ export class PagesComponent implements OnInit {
 
   cardnow() {
     this.router.navigate(['../cart'], { relativeTo: this.route });
-  }
+   }
 }
