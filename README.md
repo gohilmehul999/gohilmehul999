@@ -1,3 +1,5 @@
+
+<img src="https://c.tenor.com/flflC6GFzO8AAAAd/sultan-alrefaei-programmer.gif" alt="javascript" width="40" height="40"/>
 <h1 align="center">Hi 👋, I'm Gohil Mehul</h1>
 <h3 align="center">A passionate full stack developer from India</h3>
 
