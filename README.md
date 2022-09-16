@@ -1,6 +1,6 @@
 
-<img src="https://c.tenor.com/flflC6GFzO8AAAAd/sultan-alrefaei-programmer.gif" alt="javascript" width="40" height="40"/>
-<h1 align="center">Hi 👋, I'm Gohil Mehul</h1>
+
+<h1 align="center"><img src="https://c.tenor.com/flflC6GFzO8AAAAd/sultan-alrefaei-programmer.gif" alt="javascript" width="240"/><br>Hi 👋, I'm Gohil Mehul</h1>
 <h3 align="center">A passionate full stack developer from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=gohilmehul999&label=Profile%20views&color=0e75b6&style=flat" alt="gohilmehul999" /> </p>
