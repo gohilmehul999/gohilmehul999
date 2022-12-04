@@ -9,7 +9,7 @@
 
 - 📫 How to reach me **gohilmehul1582002@gmail.com**
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/1Xi8_zHDGnxxKcuuoJi-FbYRdTFYmB8u4/view](https://drive.google.com/file/d/1Xi8_zHDGnxxKcuuoJi-FbYRdTFYmB8u4/view)
+- 📄 Know about my experiences [https://drive.google.com/file/d/1aNmOPQqpzYwlkCbh60RqoGEdnECoIHOf/view?usp=sharing](https://drive.google.com/file/d/1aNmOPQqpzYwlkCbh60RqoGEdnECoIHOf/view?usp=sharing)
 
 - ⚡ Fun fact **My role model is my dad because he immigrated to Canada when he was only 18, got a job right away, and worked hard to provide for our family.**
 
